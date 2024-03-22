@@ -59,3 +59,13 @@ customPercent.addEventListener('blur', () => {
 customPercent.addEventListener('blur', calc)
 bill.addEventListener('blur', calc)
 people.addEventListener('blur', calc)
+reset.addEventListener('click', () => {
+    bill.value = ''
+    people.value = ''
+    peopleError.classList.remove('show')
+    percents.forEach(percent => percent.classList.remove('selected'))
+    amountResult.innerHTML = '$0.00'
+    totalResult.innerHTML = '$0.00'
+    customPercent.value = ''
+    bill.focus()
+})
