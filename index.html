@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Tip Calculator App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Logo Splitter">
+  </header>
+
+  <main>
+
+    <article>
+      <p>Bill</p>
+      <div class="input">
+        <input type="number" name="bill" id="bill" placeholder="0">
+        <img id="dollar-icon" src="images/icon-dollar.svg" alt="Dollar icon">
+      </div>
+
+      <p>Select Tip %</p>
+      <div class="percents">
+        <input type="button" value="5%">
+        <input type="button" value="10%">
+        <input type="button" value="15%">
+        <input type="button" value="25%">
+        <input type="button" value="50%">
+        <input type="number" name="button" id="custom" placeholder="Custom">
+      </div>
+
+      <div id="people-span">
+        <p>Number of People</p>
+        <span class="error-people">Can't be zero</span>
+      </div>
+      <div class="input">
+        <input type="number" name="people" id="people" placeholder="0">
+        <img id="people-icon" src="images/icon-person.svg" alt="People icon">
+      </div>
+    </article>
+
+    <section>
+
+      <div class="values">
+
+        <div class="amount">
+          <div class="text">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div id="amount">$0.00</div>
+        </div>
+
+        <div class="total">
+          <div class="text">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div id="total">$0.00</div>
+        </div>
+        
+      </div>
+
+      <button id="reset">RESET</button>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+    Coded by <a href="https://github.com/wilianmorimoto" target="_blank">Wilian Morimoto</a>.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    height: calc(100vh - 118px);
+}
+
+header img {
+    display: block;
+    margin: 2rem auto;
+}
+
+main {
+    background-color: white;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article p {
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+#bill {
+    all: unset;
+    box-sizing: border-box;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#bill:hover,
+.percents input[type=number]:hover,
+#people:hover {
+    border: 1px solid hsl(185, 41%, 84%);
+}
+
+#bill:focus,
+.percents input[type=number]:focus,
+#people:focus {
+    border: 3px solid hsl(185, 41%, 84%);
+}
+
+#bill::placeholder,
+#people::placeholder,
+.percents input[type=number]::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
+.input {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#dollar-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.percents {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+}
+
+.percents input {
+    height: 45px;
+    width: 47.75%;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: color .15s, background .15s;
+}
+
+.percents input:hover {
+    background-color: hsl(172, 70%, 31%);
+}
+
+.percents input.selected {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 69%, 46%);
+}
+
+.percents input[type=number]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.percents input[type=number] {
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    padding: 10px 15px;
+    color: hsl(183, 100%, 15%);
+    outline: 0;
+}
+
+#people {
+    all: unset;
+    box-sizing: border-box;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#bill::-webkit-inner-spin-button,
+#people::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+#people-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#people-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span.error-people {
+    display: none;
+}
+
+span.error-people.show {
+    display: inline;
+    color: rgb(255, 84, 84);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    font-style: italic;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: hsl(183, 100%, 15%);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    color: white;
+    font-weight: 600;
+    letter-spacing: .07rem;
+}
+
+.text span {
+    color: hsl(185, 11%, 59%);
+    font-weight: 900;
+    font-size: .9rem;
+}
+
+.amount,
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+#amount,
+#total {
+    font-size: 1.85rem;
+    color: hsl(172, 69%, 46%);
+    font-weight: 900;
+}
+
+section button {
+    height: 45px;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 69%, 46%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+
+    transition: color .25s, background .25s;
+}
+
+section button:hover {
+    background-color: hsl(172, 70%, 30%);
+    color: hsl(172, 84%, 64%);
+}
+
+footer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header img {
+        margin-top: 10vh;
+    }
+
+    main {
+        flex-direction: row;
+        height: fit-content;
+        gap: 40px;
+
+        margin: 10vh auto;
+        width: 90%;
+        max-width: 1000px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.13);
+    }
+
+    article {
+        flex: 1;
+    }
+
+    .percents input {
+        width: 29%;
+    }
+
+    .percents input[type=number] {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    section {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .percents input[type=number] {
+        font-size: 1.5rem;
+    }
+}
